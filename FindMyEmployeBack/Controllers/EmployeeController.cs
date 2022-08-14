@@ -1,4 +1,5 @@
 using System.Runtime.Intrinsics.X86;
+using FindMyEmployeBack.DTO;
 using FindMyEmployeBack.Interfaces;
 using FindMyEmployeBack.Model;
 using FindMyEmployeBack.Services;
@@ -22,7 +23,7 @@ public class EmployeeController : ControllerBase
     }
     // GET
     [HttpGet(Name = "GetEmployees")]
-    public async Task<IEnumerable<Employee>> GetEmployees()
+    public async Task<IEnumerable<EmployeeDTO>> GetEmployees()
     {
         var listEmployees = await _employeeService.ListEmployees();
         return listEmployees;

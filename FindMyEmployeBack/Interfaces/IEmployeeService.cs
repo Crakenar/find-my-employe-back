@@ -1,8 +1,8 @@
-using FindMyEmployeBack.Model;
+using FindMyEmployeBack.DTO;
 
 namespace FindMyEmployeBack.Interfaces;
 
 public interface IEmployeeService
 {
-    Task<IEnumerable<Employee>> ListEmployees(CancellationToken ctx = default); 
+    Task<IEnumerable<EmployeeDTO>> ListEmployees(CancellationToken ctx = default); 
 }
