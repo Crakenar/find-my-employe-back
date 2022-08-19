@@ -1,3 +1,4 @@
+using FindMyEmployeBack.Model;
 using FindMyEmployeBack.Types;
 
 namespace FindMyEmployeBack.DTO;
@@ -10,10 +11,11 @@ public class EmployeeDTO
     public String Email  { get; set; }
     public LocalizationType? Localisation  { get; set; }
     public HardSkillsType HardSkills { get; set; }
-    public string SoftSkills { get; set; }
-    public String[] Hobbies  { get; set; }
+    public String SoftSkills { get; set; }
+    public ICollection<HobbieUri> Hobbies  { get; set; }
 
-    public EmployeeDTO(string name, string lastName, int phoneNumber, string email, LocalizationType? localisation, HardSkillsType hardSkills, string softSkills, string[] hobbies)
+    public EmployeeDTO(string name, string lastName, int phoneNumber, string email, LocalizationType? localisation,
+        HardSkillsType hardSkills, string softSkills, ICollection<HobbieUri> hobbies)
     {
         Name = name;
         LastName = lastName;
